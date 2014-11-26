@@ -15,6 +15,9 @@
 		449B9A6A1A2565E100AB1858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449B9A691A2565E100AB1858 /* Images.xcassets */; };
 		449B9A6D1A2565E100AB1858 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449B9A6B1A2565E100AB1858 /* LaunchScreen.xib */; };
 		449B9A791A2565E100AB1858 /* MovingCircleMapViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A781A2565E100AB1858 /* MovingCircleMapViewTests.m */; };
+		449B9A831A25664F00AB1858 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449B9A821A25664F00AB1858 /* MapKit.framework */; };
+		449B9A861A256B6300AB1858 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A851A256B6300AB1858 /* Annotation.m */; };
+		449B9A8B1A259D0D00AB1858 /* CircleHandleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,11 @@
 		449B9A721A2565E100AB1858 /* MovingCircleMapViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovingCircleMapViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		449B9A771A2565E100AB1858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449B9A781A2565E100AB1858 /* MovingCircleMapViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovingCircleMapViewTests.m; sourceTree = "<group>"; };
+		449B9A821A25664F00AB1858 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		449B9A841A256B6300AB1858 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		449B9A851A256B6300AB1858 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		449B9A891A259D0D00AB1858 /* CircleHandleAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleHandleAnnotation.h; sourceTree = "<group>"; };
+		449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleHandleAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449B9A831A25664F00AB1858 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,7 @@
 		449B9A4D1A2565E100AB1858 = {
 			isa = PBXGroup;
 			children = (
+				449B9A821A25664F00AB1858 /* MapKit.framework */,
 				449B9A581A2565E100AB1858 /* MovingCircleMapView */,
 				449B9A751A2565E100AB1858 /* MovingCircleMapViewTests */,
 				449B9A571A2565E100AB1858 /* Products */,
@@ -83,6 +93,10 @@
 		449B9A581A2565E100AB1858 /* MovingCircleMapView */ = {
 			isa = PBXGroup;
 			children = (
+				449B9A891A259D0D00AB1858 /* CircleHandleAnnotation.h */,
+				449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */,
+				449B9A841A256B6300AB1858 /* Annotation.h */,
+				449B9A851A256B6300AB1858 /* Annotation.m */,
 				449B9A5D1A2565E100AB1858 /* AppDelegate.h */,
 				449B9A5E1A2565E100AB1858 /* AppDelegate.m */,
 				449B9A631A2565E100AB1858 /* ViewController.h */,
@@ -222,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449B9A861A256B6300AB1858 /* Annotation.m in Sources */,
 				449B9A621A2565E100AB1858 /* MovingCircleMapView.xcdatamodeld in Sources */,
+				449B9A8B1A259D0D00AB1858 /* CircleHandleAnnotation.m in Sources */,
 				449B9A5F1A2565E100AB1858 /* AppDelegate.m in Sources */,
 				449B9A651A2565E100AB1858 /* ViewController.m in Sources */,
 				449B9A5C1A2565E100AB1858 /* main.m in Sources */,

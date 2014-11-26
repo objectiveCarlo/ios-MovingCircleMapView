@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MKMapView;
+
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
