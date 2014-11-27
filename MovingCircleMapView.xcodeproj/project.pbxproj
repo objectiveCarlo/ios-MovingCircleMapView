@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4470D9481A26C62E000B3F19 /* CircularAnnotationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D9471A26C62E000B3F19 /* CircularAnnotationManager.m */; };
-		4470D94B1A26CC25000B3F19 /* CircleMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D94A1A26CC25000B3F19 /* CircleMapOverlay.m */; };
+		4470D9561A26DCEB000B3F19 /* CircleCenterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D94F1A26DCEB000B3F19 /* CircleCenterAnnotation.m */; };
+		4470D9571A26DCEB000B3F19 /* CircleHandleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D9511A26DCEB000B3F19 /* CircleHandleAnnotation.m */; };
+		4470D9581A26DCEB000B3F19 /* CircleMapOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D9531A26DCEB000B3F19 /* CircleMapOverlay.m */; };
+		4470D9591A26DCEB000B3F19 /* CircularAnnotationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4470D9551A26DCEB000B3F19 /* CircularAnnotationManager.m */; };
 		449B9A5C1A2565E100AB1858 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A5B1A2565E100AB1858 /* main.m */; };
 		449B9A5F1A2565E100AB1858 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A5E1A2565E100AB1858 /* AppDelegate.m */; };
 		449B9A621A2565E100AB1858 /* MovingCircleMapView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A601A2565E100AB1858 /* MovingCircleMapView.xcdatamodeld */; };
@@ -18,8 +20,6 @@
 		449B9A6D1A2565E100AB1858 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449B9A6B1A2565E100AB1858 /* LaunchScreen.xib */; };
 		449B9A791A2565E100AB1858 /* MovingCircleMapViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A781A2565E100AB1858 /* MovingCircleMapViewTests.m */; };
 		449B9A831A25664F00AB1858 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449B9A821A25664F00AB1858 /* MapKit.framework */; };
-		449B9A861A256B6300AB1858 /* CircleCenterAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A851A256B6300AB1858 /* CircleCenterAnnotation.m */; };
-		449B9A8B1A259D0D00AB1858 /* CircleHandleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4470D9461A26C62E000B3F19 /* CircularAnnotationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularAnnotationManager.h; sourceTree = "<group>"; };
-		4470D9471A26C62E000B3F19 /* CircularAnnotationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularAnnotationManager.m; sourceTree = "<group>"; };
-		4470D9491A26CC25000B3F19 /* CircleMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleMapOverlay.h; sourceTree = "<group>"; };
-		4470D94A1A26CC25000B3F19 /* CircleMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleMapOverlay.m; sourceTree = "<group>"; };
+		4470D94E1A26DCEB000B3F19 /* CircleCenterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCenterAnnotation.h; sourceTree = "<group>"; };
+		4470D94F1A26DCEB000B3F19 /* CircleCenterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCenterAnnotation.m; sourceTree = "<group>"; };
+		4470D9501A26DCEB000B3F19 /* CircleHandleAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleHandleAnnotation.h; sourceTree = "<group>"; };
+		4470D9511A26DCEB000B3F19 /* CircleHandleAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleHandleAnnotation.m; sourceTree = "<group>"; };
+		4470D9521A26DCEB000B3F19 /* CircleMapOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleMapOverlay.h; sourceTree = "<group>"; };
+		4470D9531A26DCEB000B3F19 /* CircleMapOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleMapOverlay.m; sourceTree = "<group>"; };
+		4470D9541A26DCEB000B3F19 /* CircularAnnotationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularAnnotationManager.h; sourceTree = "<group>"; };
+		4470D9551A26DCEB000B3F19 /* CircularAnnotationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularAnnotationManager.m; sourceTree = "<group>"; };
 		449B9A561A2565E100AB1858 /* MovingCircleMapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovingCircleMapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449B9A5A1A2565E100AB1858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449B9A5B1A2565E100AB1858 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,10 +56,6 @@
 		449B9A771A2565E100AB1858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449B9A781A2565E100AB1858 /* MovingCircleMapViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovingCircleMapViewTests.m; sourceTree = "<group>"; };
 		449B9A821A25664F00AB1858 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		449B9A841A256B6300AB1858 /* CircleCenterAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCenterAnnotation.h; sourceTree = "<group>"; };
-		449B9A851A256B6300AB1858 /* CircleCenterAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCenterAnnotation.m; sourceTree = "<group>"; };
-		449B9A891A259D0D00AB1858 /* CircleHandleAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleHandleAnnotation.h; sourceTree = "<group>"; };
-		449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleHandleAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4470D94D1A26DCEB000B3F19 /* ios-MovingCircleMapView */ = {
+			isa = PBXGroup;
+			children = (
+				4470D94E1A26DCEB000B3F19 /* CircleCenterAnnotation.h */,
+				4470D94F1A26DCEB000B3F19 /* CircleCenterAnnotation.m */,
+				4470D9501A26DCEB000B3F19 /* CircleHandleAnnotation.h */,
+				4470D9511A26DCEB000B3F19 /* CircleHandleAnnotation.m */,
+				4470D9521A26DCEB000B3F19 /* CircleMapOverlay.h */,
+				4470D9531A26DCEB000B3F19 /* CircleMapOverlay.m */,
+				4470D9541A26DCEB000B3F19 /* CircularAnnotationManager.h */,
+				4470D9551A26DCEB000B3F19 /* CircularAnnotationManager.m */,
+			);
+			path = "ios-MovingCircleMapView";
+			sourceTree = "<group>";
+		};
 		449B9A4D1A2565E100AB1858 = {
 			isa = PBXGroup;
 			children = (
@@ -99,14 +114,7 @@
 		449B9A581A2565E100AB1858 /* MovingCircleMapView */ = {
 			isa = PBXGroup;
 			children = (
-				4470D9491A26CC25000B3F19 /* CircleMapOverlay.h */,
-				4470D94A1A26CC25000B3F19 /* CircleMapOverlay.m */,
-				4470D9461A26C62E000B3F19 /* CircularAnnotationManager.h */,
-				4470D9471A26C62E000B3F19 /* CircularAnnotationManager.m */,
-				449B9A891A259D0D00AB1858 /* CircleHandleAnnotation.h */,
-				449B9A8A1A259D0D00AB1858 /* CircleHandleAnnotation.m */,
-				449B9A841A256B6300AB1858 /* CircleCenterAnnotation.h */,
-				449B9A851A256B6300AB1858 /* CircleCenterAnnotation.m */,
+				4470D94D1A26DCEB000B3F19 /* ios-MovingCircleMapView */,
 				449B9A5D1A2565E100AB1858 /* AppDelegate.h */,
 				449B9A5E1A2565E100AB1858 /* AppDelegate.m */,
 				449B9A631A2565E100AB1858 /* ViewController.h */,
@@ -246,14 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449B9A861A256B6300AB1858 /* CircleCenterAnnotation.m in Sources */,
-				4470D9481A26C62E000B3F19 /* CircularAnnotationManager.m in Sources */,
+				4470D9581A26DCEB000B3F19 /* CircleMapOverlay.m in Sources */,
+				4470D9591A26DCEB000B3F19 /* CircularAnnotationManager.m in Sources */,
+				4470D9561A26DCEB000B3F19 /* CircleCenterAnnotation.m in Sources */,
 				449B9A621A2565E100AB1858 /* MovingCircleMapView.xcdatamodeld in Sources */,
-				449B9A8B1A259D0D00AB1858 /* CircleHandleAnnotation.m in Sources */,
+				4470D9571A26DCEB000B3F19 /* CircleHandleAnnotation.m in Sources */,
 				449B9A5F1A2565E100AB1858 /* AppDelegate.m in Sources */,
 				449B9A651A2565E100AB1858 /* ViewController.m in Sources */,
 				449B9A5C1A2565E100AB1858 /* main.m in Sources */,
-				4470D94B1A26CC25000B3F19 /* CircleMapOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
