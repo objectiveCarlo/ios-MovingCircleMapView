@@ -1,14 +1,15 @@
 //
-//  Annotation.m
+//  CircleCenterAnnotation.m
 //  MovingCircleMapView
 //
 //  Created by Carlo Bation on 11/26/14.
 //  Copyright (c) 2014 CL. All rights reserved.
 //
 
-#import "Annotation.h"
+#import "CircleCenterAnnotation.h"
 
-@implementation Annotation
+@implementation CircleCenterAnnotation
+
 @synthesize coordinate;
 
 

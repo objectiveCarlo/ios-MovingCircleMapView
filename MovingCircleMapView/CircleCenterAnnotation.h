@@ -1,5 +1,5 @@
 //
-//  Annotation.h
+//  CircleCenterAnnotation.h
 //  MovingCircleMapView
 //
 //  Created by Carlo Bation on 11/26/14.
@@ -7,8 +7,12 @@
 //
 
 #import <MapKit/MapKit.h>
-@interface Annotation : NSObject<MKAnnotation> {
-}
+@interface CircleCenterAnnotation : NSObject<MKAnnotation>
+
+@property (nonatomic, assign) id parent;
+
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coord;
+
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
+
 @end

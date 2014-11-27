@@ -8,46 +8,27 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
-#import "Annotation.h"
+#import "CircleCenterAnnotation.h"
 #import "CircleHandleAnnotation.h"
+#import "CircularAnnotationManager.h"
+#import "CircleMapOverlay.h"
 @interface ViewController ()<MKMapViewDelegate>
 
-@property (assign, nonatomic) CLLocationCoordinate2D previousCenter;
-@property (assign, nonatomic) CLLocationDistance previousRadius;
+@property (nonatomic, strong) CircularAnnotationManager *annotationCollection;
+
 @end
 
 @implementation ViewController	
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _previousRadius = 10000;
-    _previousCenter = CLLocationCoordinate2DMake(14.576367, 121.085118);
-    [self createHandlersWithCenter:_previousCenter withRadius:_previousRadius];
-}
-- (void)createHandlersWithCenter:(CLLocationCoordinate2D)coordinate withRadius:(CLLocationDistance)radius {
     
-    [self.mapView removeAnnotations:self.mapView.annotations];
+    self.annotationCollection = [CircularAnnotationManager makeAnnotationsWithCoordinate:CLLocationCoordinate2DMake(14.576367, 121.085118) withRadius:10000];
     
-    [self addNewCircleWithCenter:coordinate withRadius:radius inMap:self.mapView flushOldOverlays:YES];
+    [self.mapView addOverlay:self.annotationCollection.circleOverlay];
+    [self.mapView addAnnotations:[self.annotationCollection getAnnotations]];
     
-    Annotation *myPin = [[Annotation alloc] initWithCoordinate:coordinate];
-    [self.mapView addAnnotation:myPin];
-    
-    
-    CircleHandleAnnotation *ciclePin = [[CircleHandleAnnotation alloc] initWithCoordinate:coordinate withRadius:radius];
-    [self.mapView addAnnotation:ciclePin];
 }
 
-- (void)addNewCircleWithCenter:(CLLocationCoordinate2D)coordinate withRadius:(CLLocationDistance)radius inMap:(MKMapView *)mapView flushOldOverlays:(BOOL)flushOldOverlays{
-    
-    NSArray *overlays = mapView.overlays;
-    
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:coordinate radius:radius];
-    [self.mapView addOverlay:circle];
-    
-    if (flushOldOverlays) {
-        [self.mapView removeOverlays:overlays];
-    }
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -62,7 +43,7 @@
     
     MKAnnotationView *pin = (MKAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier: possiblePinClass];
     if (pin == nil) {
-        pin = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: possiblePinClass]; // If you use ARC, take out 'autorelease'
+        pin = [[MKAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: possiblePinClass];
     } else {
         pin.annotation = annotation;
     }
@@ -103,29 +84,6 @@
 didChangeDragState:(MKAnnotationViewDragState)newState
    fromOldState:(MKAnnotationViewDragState)oldState
 {
-    if (newState == MKAnnotationViewDragStateEnding) {
-        
-        CLLocationCoordinate2D droppedAt = annotationView.annotation.coordinate;
-       
-        if ([annotationView.annotation isKindOfClass:[CircleHandleAnnotation class]]) {
-            
-            CLLocationDistance newRadius = [self getNewRadius:droppedAt withCenter:_previousCenter];
-            
-            _previousRadius = newRadius;
-            
-            [self addNewCircleWithCenter:_previousCenter withRadius:_previousRadius inMap:self.mapView flushOldOverlays:YES];
-            
-            
-            
-        } else {
-            
-            _previousCenter = droppedAt;
-            
-            [self createHandlersWithCenter:_previousCenter withRadius:_previousRadius];
-        }
-        
-        [annotationView setDragState:MKAnnotationViewDragStateNone];
-        
-    }
+    [CircularAnnotationManager mapView:mapView annotationView:annotationView didChangeDragState:newState fromOldState:oldState];
 }
 @end
